@@ -12,9 +12,10 @@ services:
       - 5672:5672
       - 5671:5671
 
-  pykaldi:
+  pykaldi_img_1:
     build: ./pykaldi
-    container_name: 'pykaldi-rus-1'
+      context: .
+      target: pykaldi_img_1
     networks:
       - pika
     depends_on:
@@ -23,9 +24,10 @@ services:
       - 9000:9000
       
       
-  pykaldi:
-    build: ./pykaldi_2
-    container_name: 'pykaldi-rus-2'
+  pykaldi_img_2:
+    build: ./pykaldi
+      context: .
+      target: pykaldi_img_2
     networks:
       - pika
     depends_on:
