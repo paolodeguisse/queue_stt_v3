@@ -13,8 +13,8 @@ services:
       - 5671:5671
 
   pykaldi_img_1:
-    build: ./pykaldi
-      context: .
+    build:
+      context: ./pykaldi
       target: pykaldi_img_1
     networks:
       - pika
@@ -25,8 +25,8 @@ services:
       
       
   pykaldi_img_2:
-    build: ./pykaldi
-      context: .
+    build:
+      context: ./pykaldi
       target: pykaldi_img_2
     networks:
       - pika
