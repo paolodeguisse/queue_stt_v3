@@ -7,7 +7,7 @@ RUN apt-get update -y && \
     
 RUN ln -sf /usr/bin/python3.8 /usr/bin/python3
 RUN ln -sf /usr/bin/python3.8 /usr/bin/python
-RUN python -m pip install --upgrade pip
+RUN python3 -m pip install --upgrade pip
     
     
 RUN apt-get install libpq-dev -y && \
